@@ -556,8 +556,8 @@ A `git stash` is basically a stack of changes on which you store any changes to 
 
 The commands you'll mostly use are `git stash` which places any modifications to the _Working Directory_ on the stash, and `git stash pop` which takes the latest change that was stashed and applies it the to the _Working Directory_ again. 
 
-Just like the stack commands it's named after, `git stash pop` removes the latest stashed change before applying it again. 
-If you want to keep the stashed changes, you can use `git stash apply`, which doesn't remove them from the stash before applying them. 
+Just like the [stack commands](https://en.wikipedia.org/wiki/Stack_(abstract_data_type)) it's named after, `git stash pop` removes the latest stashed change before applying these changes to the working directory. 
+If you want to keep the stashed changes, you can use `git stash apply`, this applies the latest stashed changes to the working directory without removing them from the stash. 
 
 To inspect your current `stash` you can use `git stash list` to list the individual entries, and `git stash show` to show the changes in the latest entry on the `stash`. 
 
@@ -601,7 +601,7 @@ Thinking that way, the two options you have to get _remote_ changes make a lot o
 
 When you `git pull`, the _Local_ and _Remote_ versions of a branch will be `merged`. Just like `merging` branches, this will introduce a _merge_ commit. 
 
-As any _local_ branch is based on its respective _remote_ version, we can also `rebase` it, so that any changes we may have made locally, appear as if they were based on the latest version that is available in the _Remote Repository. 
+As any _local_ branch is based on its respective _remote_ version, we can also `rebase` it, so that any changes we may have made locally, appear as if they were based on the latest version that is available in the _Remote Repository_. 
 To do that, we can use `git pull --rebase` (or the shorthand `git pull -r`). 
 
 As detailed in the section on [Rebasing](#rebasing), there is a benefit in keeping a clean linear history, which is why I would strongly recommend that whenever you `git pull` you do a `git pull -r`. 
